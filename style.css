@@ -1,0 +1,359 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+}
+
+/* sidebar stying */
+main .sidebar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: white;
+    height: 100vh;
+    width: 250px;
+    padding: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.376);
+}
+main .sidebar .sidebar-logo h1{
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 2rem;
+}
+main .sidebar .sidebar-logo h1 span{
+    color: red;
+}
+main .sidebar .sidebar-menu span{
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+main .sidebar .sidebar-menu ul{
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+main .sidebar .sidebar-menu ul li{
+    list-style: none;
+    margin: 1rem 0;
+    
+}
+main .sidebar .sidebar-menu ul li a{
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.675);
+    padding: 0.5rem 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    padding-left: 2rem;
+}
+main .sidebar .sidebar-menu ul li a:hover{
+    color: red;
+    border-left: 3px solid red;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+main .sidebar .sidebar-menu ul li a.active{
+    color: rgb(0, 0, 0);
+}
+
+main .sidebar .sidebar-ads{
+    position: absolute; ;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.482);
+    width: 220px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 0.8rem;
+    text-align: center;
+}
+main .sidebar .sidebar-ads .ads-pp{
+    position: absolute;
+    left: 90px;
+    top: -15px;
+    height: 35px;
+    width: 35px;
+    background-color: gray;
+    border-radius: 10px;
+}
+main .sidebar .sidebar-ads .ads-text{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    text-align: center;
+}
+main .sidebar .sidebar-ads .ads-text span{
+    display: block;
+}
+main .sidebar .sidebar-ads .ads-text span:first-child{
+   font-size: 1.2rem;
+   font-weight: bolder;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main .sidebar .sidebar-ads .ads-text span:nth-child(2){
+    font-size: 1rem;
+    font-weight: light;
+    margin: 0.3rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.822);
+ }
+ main .sidebar .sidebar-ads .ads-text button{
+    margin-top: 0.7rem;
+    padding: 0.5rem 1rem;
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 8px;
+ }
+/* END sidebar stying */
+
+/* main containe styling */
+.content{
+    width: 75%;
+    /* min-width: 700px; */
+    padding: 20px 50px 0 300px;
+    background-color: rgba(189, 197, 201, 0.177);
+}
+/* header styling */
+.content .content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.content .content-header .search-box{
+    display: flex;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 15px;
+    width: 300px;
+    margin-left: 1rem;
+}
+.content .content-header .search-box img{
+    width: 30px;
+    height: 25px;
+}
+.content .content-header .search-box input[type="search"]{
+    border: none;
+    outline: none;
+    width: 270px;
+    background: none;
+}
+.content .content-header .profile-box{
+    align-self: flex-end;
+    margin-right: 1rem;
+    display: flex;
+}
+.content .content-header .profile-box .notification-box,
+.content .content-header .profile-box .message-box{
+    position: relative;
+}
+.content .content-header .profile-box .notification-box div{
+    position: absolute;
+    top: 10px;
+    left:30px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.message-box img{
+    height: 44px;
+}
+.content .content-header .profile-box .message-box div{
+    position: absolute;
+    top: 10px;
+    left:35px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.content .content-header .profile-box .profile{
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+.content .content-header .profile-box .profile .profile-img-box{
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+.content .content-header .profile-box .profile .profile-img-box img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+}
+.content .content-header .profile-box .profile span{
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.content .content-header .profile-box .profile span:first-child{
+    font-weight: bold; 
+}
+.content .content-header .profile-box .profile span:last-child{
+    font-weight: lighter; 
+}
+/* END header styling */
+
+/* banner styling */
+.banner-content{
+    background-image: url(assets/imgs/banner-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 300px;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 1rem;
+    position: relative;
+}
+.banner-top{
+    display: flex;
+}
+.banner-top .banner-top-text{
+    font-size: 1.1rem;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 25px;
+}
+
+.banner-top .banner-imgs{
+    position: relative;
+}
+.banner-top .banner-imgs img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid black;
+}
+.banner-top .banner-imgs img:first-child{
+   left: 5px;
+}
+.banner-top .banner-imgs img:nth-child(2){
+    left: 25px;
+ }
+ .banner-top .banner-imgs img:nth-child(3){
+    left: 45px;
+ }
+
+ .banner-bottom{
+    position: absolute;
+    bottom: 2rem;
+ }
+ .banner-bottom h1{
+    font-size: 3rem;
+    margin: 0;
+ }
+ .banner-bottom span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+ }
+ .banner-bottom span.seasons-span{
+    margin-left: 1.5rem;
+ }
+ .banner-bottom .banner-button button:first-child{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px red, -2px -2px 5px red;
+    transition: all 0.3s ease-in-out;
+}
+ .banner-bottom .banner-button button:first-child:hover{
+    box-shadow: 2px 3px 10px 5px red, -2px -3px 10px 5px red;
+ }
+ .banner-bottom .banner-button button:nth-child(2){
+    background-color: rgb(31, 30, 30);
+    border: none;
+    margin-left: 1rem;
+    vertical-align: middle;
+    border-radius: 8px;
+    padding: 0.5rem;
+ }
+ .banner-bottom .banner-button button:nth-child(2) img{
+    width: 20px;
+ }
+/* END banner styling */
+/* profile side bar */
+.profile-menu-list{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 90px;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.profile-menu-list .add-profile img{
+    width: 70px;
+    height: 70px;
+}
+.profile-menu-list .profile-img-online{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+.profile-menu-list .profile-img-online img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+/* responsive  */
+/* Mobile */
+@media screen and (max-width: 514px){
+    div.arrows,
+    .content .content-header .profile-box .notification-box,
+    .content .content-header .profile-box .message-box{
+    display: none;
+}
+}
+/* Tablet */
+@media screen and (max-width: 768px) {
+    main .sidebar{
+        display: none;
+    }
+    .profile-menu-list{
+        display: none;
+    }
+    .content{
+        width:100%;
+        padding: 5px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+/* Desktop */
+@media screen and (min-width: 769px) and (max-width: 1524px) {
+    .profile-menu-list{
+        display: none;
+    }
+    .content{
+        width:100%;
+    }
+}
