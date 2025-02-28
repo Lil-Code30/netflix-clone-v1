@@ -119,6 +119,7 @@ main .sidebar .sidebar-ads .ads-text span:nth-child(2){
 /* main containe styling */
 .content{
     width: 75%;
+    height: 100vh;
     /* min-width: 700px; */
     padding: 20px 50px 0 300px;
     background-color: rgba(189, 197, 201, 0.177);
@@ -291,6 +292,113 @@ main .sidebar .sidebar-ads .ads-text span:nth-child(2){
     width: 20px;
  }
 /* END banner styling */
+.category-container h2{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.category-box{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.category-box .category-item {
+    background-color: rgba(221, 247, 255, 0.374);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.403);
+    width: 250px;
+}
+.category-item-active{
+    box-shadow: 2px 3px 15px 5px rgba(0, 0, 0, 0.403);
+}
+.category-box .category-item  .category-item-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.category-box .category-item  .category-item-top .category-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+.category-box .category-item  .category-item-top .category-imgs-left{
+    position: absolute;
+    left: 180px;
+    top: -5px;
+}
+.category-box .category-item  .category-item-top .category-imgs-left img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid black;
+}
+.category-box .category-item  .category-item-top .category-imgs-left img:first-child{
+   left: 5px;
+}
+.category-box .category-item  .category-item-top .category-imgs-left img:nth-child(2){
+    left: 25px;
+    z-index: 2;
+ }
+ .category-box .category-item  .category-item-top .category-imgs-left img:nth-child(3){
+    left: 45px;
+ }
+ .category-text h3{
+    margin: 0;
+    padding: 0.5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .category-text p{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+.continue-watching-boxes{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+.continue-watching-boxes .continue-watching-box{
+    background-color: rgba(255, 255, 255, 0.177);
+    width: 250px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: white;
+    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.403);
+}
+.continue-watching-boxes .continue-watching-top-box img{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 180px;
+   
+}
+.continue-watching-bottom{
+    padding: 0.5rem;
+}
+.continue-watching-bottom h3{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.continue-watching-bottom p{
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+
+/* end main content styling */
 /* profile side bar */
 .profile-menu-list{
     position: fixed;
@@ -305,7 +413,6 @@ main .sidebar .sidebar-ads .ads-text span:nth-child(2){
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    
 }
 .profile-menu-list .add-profile img{
     width: 70px;
@@ -330,8 +437,11 @@ main .sidebar .sidebar-ads .ads-text span:nth-child(2){
     div.arrows,
     .content .content-header .profile-box .notification-box,
     .content .content-header .profile-box .message-box{
-    display: none;
-}
+        display: none;
+    }
+    .profile div:last-child{
+        display: none;
+    }
 }
 /* Tablet */
 @media screen and (max-width: 768px) {
